@@ -1,0 +1,6 @@
+@BlockchainTicketsAPI_HostAddress = http://localhost:5171
+
+GET {{BlockchainTicketsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
