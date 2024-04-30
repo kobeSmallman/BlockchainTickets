@@ -42,131 +42,110 @@ This pattern is beneficial if you expect your application to grow or anticipate 
 
 Data Transfer Objects (DTOs folder)
 Using DTOs is recommended when you need to shape the data for the needs of your consumers without exposing internal models. For a web application that could potentially scale and involve various data consumers (like web and mobile apps), DTOs provide a way to send only necessary data in a format that's most useful to the client, enhancing both security and performance.
-FRONTEND FILE STRUCTURE 2024-04-30
+# BlockchainTickets - Project Overview
+
+# File Structure
+
+## Frontend (`blockchain-tickets-ui`)
 blockchain-tickets-ui/
-│
-├── public/                      # Contains static assets and the HTML file
-│   ├── favicon.ico              # Favicon icon
-│   ├── index.html               # Main HTML file
-│   ├── logo192.png              # Logo image
-│   ├── logo512.png              # Larger logo image
-│   ├── manifest.json            # Application manifest file
-│   └── robots.txt               # Instructions for web crawlers
-│
-├── src/                         # Source files for the application
-│   ├── assets/                  # Static assets like images, fonts, etc.
-│   │   └── main.css             # Main stylesheet for the application
-│   │
-│   ├── components/              # Reusable UI components
-│   │   ├── Footer/              # Footer component
-│   │   │   ├── index.js         # Footer component logic
-│   │   │   └── styles.css       # Footer component styles
-│   │   │
-│   │   ├── Header/              # Header component
-│   │   │   ├── index.js         # Header component logic
-│   │   │   └── styles.css       # Header component styles
-│   │   │
-│   │   └── Layout/              # Layout wrapper component
-│   │       ├── index.js         # Layout component logic
-│   │       └── styles.css       # Layout component styles
-│   │
-│   ├── pages/                   # Page components
-│   │   ├── Event/               # Event page
-│   │   │   ├── index.js         # Event page logic
-│   │   │   └── styles.css       # Event page styles
-│   │   ├── Home/                # Home page
-│   │   │   ├── index.js         # Home page logic
-│   │   │   └── styles.css       # Home page styles
-│   │   ├── Login/               # Login page
-│   │   │
-│ │ │ ├── index.js # Login page logic
-│ │ │ └── styles.css # Login page styles
-│ │ │
-│ ├── services/ # Services to handle backend API calls
-│ │ ├── authService.js # Authentication service
-│ │ └── blockchainService.js # Blockchain interaction service
-│ │
-│ ├── App.js # Root React component
-│ ├── App.css # Styles for the App component
-│ ├── index.js # Entry point for React to hook into the DOM
-│ ├── index.css # Global styles
-│ ├── reportWebVitals.js # Tool for measuring performance
-│ ├── setupTests.js # Setup file for Jest tests
-│ └── logo.svg # Logo used in the header
-│
-├── README.md # Project documentation
-├── package.json # NPM package manager file
-└── package-lock.json # NPM locked down dependency versions
-BACKEND FILE STRUCTURE 2024-04-30
+├── public/
+│ ├── favicon.ico
+│ ├── index.html
+│ ├── logo192.png
+│ ├── logo512.png
+│ ├── manifest.json
+│ └── robots.txt
+├── src/
+│ ├── assets/
+│ │ └── main.css
+│ ├── components/
+│ │ ├── Footer/
+│ │ │ ├── index.js
+│ │ │ └── styles.css
+│ │ ├── Header/
+│ │ │ ├── index.js
+│ │ │ └── styles.css
+│ │ └── Layout/
+│ │ ├── index.js
+│ │ └── styles.css
+│ ├── pages/
+│ │ ├── Event/
+│ │ │ ├── index.js
+│ │ │ └── styles.css
+│ │ ├── Home/
+│ │ │ ├── index.js
+│ │ │ └── styles.css
+│ │ └── Login/
+│ │ ├── index.js
+│ │ └── styles.css
+│ ├── services/
+│ │ ├── authService.js
+│ │ └── blockchainService.js
+│ ├── App.js
+│ ├── App.css
+│ ├── index.js
+│ ├── index.css
+│ ├── reportWebVitals.js
+│ ├── setupTests.js
+│ └── logo.svg
+├── README.md
+├── package.json
+└── package-lock.json
+
+## Backend (`BlockchainTicketsAPI`)
 BlockchainTicketsAPI/
-│
-├── Configurations/             # Configuration files for different parts of the application
-│
-├── Controllers/                # Controllers to handle API requests
-│   ├── EventsController.cs     # Controller for event-related operations
-│   ├── TicketsController.cs    # Controller for ticket-related operations
-│   └── UsersController.cs      # Controller for user-related operations
-│
-├── Data/                       # Data access layer
-│   ├── ApplicationDbContext.cs # Entity Framework Core context
-│
-├── Dtos/                       # Data Transfer Objects for encapsulating data
-│   ├── EventDto.cs             # DTO for Event data
-│   ├── TicketDto.cs            # DTO for Ticket data
-│   └── UserDto.cs              # DTO for User data
-│
-├── Models/                     # Domain models representing database tables
-│   ├── Event.cs                # Event model
-│   ├── Ticket.cs               # Ticket model
-│   └── User.cs                 # User model
-│
-├── Repositories/               # Repositories for handling database operations
-│   ├── EventRepository.cs      # Repository for Event data
-│   ├── TicketRepository.cs     # Repository for Ticket data
-│   └── UserRepository.cs       # Repository for User data
-│
-├── Services/                   # Services for business logic
-│   ├── AuthenticationService.cs # Service for authentication-related logic
-│   └── BlockchainService.cs    # Service for blockchain interaction logic
-│
-├── wwwroot/                    # Static files for the API
-│
-├── appsettings.Development.json # Configuration settings for development environment
-├── appsettings.Production.json  # Configuration settings for production environment
-├── appsettings.json             # General configuration settings
-├── BlockchainTicketsAPI.csproj  # Project file
-├── Program.cs                   # Entry point of the API
-├── Startup.cs                   # Configures services and the app's request pipeline
-└── README.md                    # Project documentation
+├── Configurations/
+├── Controllers/
+│ ├── EventsController.cs
+│ ├── TicketsController.cs
+│ └── UsersController.cs
+├── Data/
+│ ├── ApplicationDbContext.cs
+├── Dtos/
+│ ├── EventDto.cs
+│ ├── TicketDto.cs
+│ └── UserDto.cs
+├── Models/
+│ ├── Event.cs
+│ ├── Ticket.cs
+│ └── User.cs
+├── Repositories/
+├── Services/
+│ ├── AuthenticationService.cs
+│ └── BlockchainService.cs
+├── wwwroot/
+├── appsettings.Development.json
+├── appsettings.Production.json
+├── appsettings.json
+├── BlockchainTicketsAPI.csproj
+├── Program.cs
+├── Startup.cs
+└── README.md
 
 
-Project Overview: BlockchainTickets
+## Goal
+BlockchainTickets aims to become a blockchain-based event ticketing platform that rivals traditional services like Ticketmaster. It leverages blockchain technology to enhance transparency, security, and efficiency in the ticketing process. This helps in minimizing fraud, unauthorized reselling, and providing a trustworthy experience for both event organizers and attendees.
 
-Goal:
-BlockchainTickets is designed to disrupt the traditional event ticketing market, currently dominated by platforms like Ticketmaster. This project aims to leverage blockchain technology to introduce a high level of transparency, security, and efficiency in the ticketing process, which is often plagued by issues like fraud and scalping. By using blockchain, BlockchainTickets ensures that each ticket is unique and securely owned, making unauthorized reselling and duplication nearly impossible. This not only enhances trust among participants but also streamlines the process of buying, selling, and checking tickets.
+## Problem Being Solved
+Traditional ticketing systems often suffer from issues like fraud, high scalping, and a lack of control over the distribution of tickets after the initial sale. BlockchainTickets addresses these problems by embedding the ticketing process in a blockchain, ensuring each ticket is unique and securely owned.
 
-Problem Being Solved:
-Traditional ticketing systems are often criticized for their lack of transparency and high susceptibility to fraud. Customers and event organizers face challenges like fake tickets, high secondary market prices due to scalping, and a lack of control over ticket distribution after the initial sale. These problems undermine the customer experience and profitability for event organizers.
+## Solution
+The platform utilizes blockchain to provide:
+- **Security and Authenticity:** Tickets are tamper-proof and their authenticity can be verified.
+- **Transparency:** Every transaction is recorded on a public ledger, visible to everyone but cannot be altered retroactively.
+- **Decentralized Control:** Reduces reliance on central authorities, mitigating risks associated with them.
+- **Reduced Scalping and Fraud:** Enforces rules about ticket reselling directly within the ticket using smart contracts.
 
-Solution Offered by BlockchainTickets:
-BlockchainTickets addresses these issues by integrating blockchain technology into the ticketing process. Here’s how the solution improves the system:
+## Key Features
+- Secure ticket sales and transfers via blockchain.
+- Real-time availability and booking.
+- Detailed seating arrangements and venue selection.
+- User profiles for sellers and buyers.
+- Mobile and web access for ease of use.
+- Integration with payment gateways for secure transactions.
 
-Security and Authenticity: Each ticket is a blockchain-based digital asset, which means it's tamper-proof and its authenticity can be verified. Blockchain's inherent security features prevent duplication and unauthorized ticket transfers.
-Transparency in Ticket Lifecycle: Every transaction on the blockchain is recorded on a public ledger, which is accessible to everyone but cannot be altered without consensus. This ensures transparency in ticket sales and ownership.
-Decentralized Control: Blockchain allows for decentralized control over ticketing, reducing dependence on central authorities that can be a single point of failure or corruption. It empowers event organizers and consumers by giving them control over their purchases and sales.
-Reduced Scalping and Fraud: By utilizing smart contracts, BlockchainTickets can enforce rules about ticket reselling, including price caps or transfer restrictions, directly within the ticket itself, which helps mitigate issues like scalping and fraud.
-Key Features:
-
-Secure ticket sales and transfers via blockchain: Ensures that all ticket transactions are secure and verifiable.
-Real-time availability and booking of tickets: Enhances user experience by providing up-to-date ticket availability and seamless booking options.
-Detailed seating arrangements and venue selection: Allows users to view interactive seating charts and choose precisely where they want to sit.
-User profiles for sellers and buyers: Creates a personalized experience for users, whether they are event organizers or attendees, enabling better service and offers based on user history.
-Mobile and web access: Ensures accessibility across different devices, increasing the reach and ease of use for the platform.
-Integration with payment gateways: Facilitates secure and varied payment options, catering to a global audience.
-Technology Stack:
-
-Frontend: Uses React (alternatively Angular or Vue) to create a dynamic and responsive user interface that can handle real-time data updates and user interactions efficiently.
-Backend: Employs .NET Core for building a robust and scalable API that can handle the demands of handling secure transactions and user data management.
-Database: Utilizes PostgreSQL to reliably store and manage user data and complex ticketing transactions, chosen for its robustness and scalability.
-Blockchain: Adopts Ethereum for its mature ecosystem and smart contract capabilities, allowing for detailed and enforceable ownership rules embedded within the tickets.
-This architecture and solution design aim to create a seamless, secure, and user-friendly platform that addresses the inefficiencies of traditional ticketing systems while harnessing the advantages of modern technology.
+## Technology Stack
+- **Frontend:** React for a dynamic and responsive user interface.
+- **Backend:** .NET Core for a scalable API.
+- **Database:** PostgreSQL for robust data management.
+- **Blockchain:** Ethereum for managing the ticket lifecycle and ensuring security.
