@@ -1,6 +1,8 @@
 ﻿# BlockchainTickets
 A blockchain solution for event tickets.
 
+if interested see bottom of page to see the goal of the project.
+
 # Connecting to the BlockchainTickets PostgreSQL Database
 
 ## Prerequisites
@@ -136,3 +138,35 @@ BlockchainTicketsAPI/
 ├── Program.cs                   # Entry point of the API
 ├── Startup.cs                   # Configures services and the app's request pipeline
 └── README.md                    # Project documentation
+
+
+Project Overview: BlockchainTickets
+
+Goal:
+BlockchainTickets is designed to disrupt the traditional event ticketing market, currently dominated by platforms like Ticketmaster. This project aims to leverage blockchain technology to introduce a high level of transparency, security, and efficiency in the ticketing process, which is often plagued by issues like fraud and scalping. By using blockchain, BlockchainTickets ensures that each ticket is unique and securely owned, making unauthorized reselling and duplication nearly impossible. This not only enhances trust among participants but also streamlines the process of buying, selling, and checking tickets.
+
+Problem Being Solved:
+Traditional ticketing systems are often criticized for their lack of transparency and high susceptibility to fraud. Customers and event organizers face challenges like fake tickets, high secondary market prices due to scalping, and a lack of control over ticket distribution after the initial sale. These problems undermine the customer experience and profitability for event organizers.
+
+Solution Offered by BlockchainTickets:
+BlockchainTickets addresses these issues by integrating blockchain technology into the ticketing process. Here’s how the solution improves the system:
+
+Security and Authenticity: Each ticket is a blockchain-based digital asset, which means it's tamper-proof and its authenticity can be verified. Blockchain's inherent security features prevent duplication and unauthorized ticket transfers.
+Transparency in Ticket Lifecycle: Every transaction on the blockchain is recorded on a public ledger, which is accessible to everyone but cannot be altered without consensus. This ensures transparency in ticket sales and ownership.
+Decentralized Control: Blockchain allows for decentralized control over ticketing, reducing dependence on central authorities that can be a single point of failure or corruption. It empowers event organizers and consumers by giving them control over their purchases and sales.
+Reduced Scalping and Fraud: By utilizing smart contracts, BlockchainTickets can enforce rules about ticket reselling, including price caps or transfer restrictions, directly within the ticket itself, which helps mitigate issues like scalping and fraud.
+Key Features:
+
+Secure ticket sales and transfers via blockchain: Ensures that all ticket transactions are secure and verifiable.
+Real-time availability and booking of tickets: Enhances user experience by providing up-to-date ticket availability and seamless booking options.
+Detailed seating arrangements and venue selection: Allows users to view interactive seating charts and choose precisely where they want to sit.
+User profiles for sellers and buyers: Creates a personalized experience for users, whether they are event organizers or attendees, enabling better service and offers based on user history.
+Mobile and web access: Ensures accessibility across different devices, increasing the reach and ease of use for the platform.
+Integration with payment gateways: Facilitates secure and varied payment options, catering to a global audience.
+Technology Stack:
+
+Frontend: Uses React (alternatively Angular or Vue) to create a dynamic and responsive user interface that can handle real-time data updates and user interactions efficiently.
+Backend: Employs .NET Core for building a robust and scalable API that can handle the demands of handling secure transactions and user data management.
+Database: Utilizes PostgreSQL to reliably store and manage user data and complex ticketing transactions, chosen for its robustness and scalability.
+Blockchain: Adopts Ethereum for its mature ecosystem and smart contract capabilities, allowing for detailed and enforceable ownership rules embedded within the tickets.
+This architecture and solution design aim to create a seamless, secure, and user-friendly platform that addresses the inefficiencies of traditional ticketing systems while harnessing the advantages of modern technology.
