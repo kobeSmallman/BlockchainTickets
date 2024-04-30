@@ -40,33 +40,99 @@ This pattern is beneficial if you expect your application to grow or anticipate 
 
 Data Transfer Objects (DTOs folder)
 Using DTOs is recommended when you need to shape the data for the needs of your consumers without exposing internal models. For a web application that could potentially scale and involve various data consumers (like web and mobile apps), DTOs provide a way to send only necessary data in a format that's most useful to the client, enhancing both security and performance.
-
-
-BlockchainTickets/
+FRONTEND FILE STRUCTURE 2024-04-30
+blockchain-tickets-ui/
 │
-├── BlockchainTicketsAPI/              # Root directory for the API
-│   ├── bin/
-│   ├── obj/
-│   ├── Controllers/                   # Controllers handle incoming HTTP requests
-│   ├── Properties/
-│   ├── Models/                        # Domain models represent the entities in your application
-│   ├── Dtos/                          # Data Transfer Objects for external data shape
-│   ├── Repositories/                  # Repository interfaces and implementations
-│   ├── Services/                      # Business logic and service layer
-│   ├── Configurations/                # Configurations like DB contexts and other settings
-│   ├── Migrations/                    # Database migrations if using EF Core
-│   ├── wwwroot/                       # Static files directory
-│   ├── appsettings.json               # Configuration settings
-│   ├── appsettings.Development.json   # Development specific settings
-│   ├── appsettings.Production.json    # Production specific settings
-│   ├── Program.cs                     # Entry point of the API
-│   ├── Startup.cs                     # App startup configuration, including DI setup
-│   └── BlockchainTicketsAPI.csproj    # Project file
+├── public/                      # Contains static assets and the HTML file
+│   ├── favicon.ico              # Favicon icon
+│   ├── index.html               # Main HTML file
+│   ├── logo192.png              # Logo image
+│   ├── logo512.png              # Larger logo image
+│   ├── manifest.json            # Application manifest file
+│   └── robots.txt               # Instructions for web crawlers
 │
-├── BlockchainTickets.Tests/           # Unit tests and integration tests for the API
-│   ├── ControllerTests/
-│   ├── ServiceTests/
-│   ├── RepositoryTests/
-│   └── BlockchainTickets.Tests.csproj
+├── src/                         # Source files for the application
+│   ├── assets/                  # Static assets like images, fonts, etc.
+│   │   └── main.css             # Main stylesheet for the application
+│   │
+│   ├── components/              # Reusable UI components
+│   │   ├── Footer/              # Footer component
+│   │   │   ├── index.js         # Footer component logic
+│   │   │   └── styles.css       # Footer component styles
+│   │   │
+│   │   ├── Header/              # Header component
+│   │   │   ├── index.js         # Header component logic
+│   │   │   └── styles.css       # Header component styles
+│   │   │
+│   │   └── Layout/              # Layout wrapper component
+│   │       ├── index.js         # Layout component logic
+│   │       └── styles.css       # Layout component styles
+│   │
+│   ├── pages/                   # Page components
+│   │   ├── Event/               # Event page
+│   │   │   ├── index.js         # Event page logic
+│   │   │   └── styles.css       # Event page styles
+│   │   ├── Home/                # Home page
+│   │   │   ├── index.js         # Home page logic
+│   │   │   └── styles.css       # Home page styles
+│   │   ├── Login/               # Login page
+│   │   │
+│ │ │ ├── index.js # Login page logic
+│ │ │ └── styles.css # Login page styles
+│ │ │
+│ ├── services/ # Services to handle backend API calls
+│ │ ├── authService.js # Authentication service
+│ │ └── blockchainService.js # Blockchain interaction service
+│ │
+│ ├── App.js # Root React component
+│ ├── App.css # Styles for the App component
+│ ├── index.js # Entry point for React to hook into the DOM
+│ ├── index.css # Global styles
+│ ├── reportWebVitals.js # Tool for measuring performance
+│ ├── setupTests.js # Setup file for Jest tests
+│ └── logo.svg # Logo used in the header
 │
-└── README.md                          # Project overview and setup instructions
+├── README.md # Project documentation
+├── package.json # NPM package manager file
+└── package-lock.json # NPM locked down dependency versions
+BACKEND FILE STRUCTURE 2024-04-30
+BlockchainTicketsAPI/
+│
+├── Configurations/             # Configuration files for different parts of the application
+│
+├── Controllers/                # Controllers to handle API requests
+│   ├── EventsController.cs     # Controller for event-related operations
+│   ├── TicketsController.cs    # Controller for ticket-related operations
+│   └── UsersController.cs      # Controller for user-related operations
+│
+├── Data/                       # Data access layer
+│   ├── ApplicationDbContext.cs # Entity Framework Core context
+│
+├── Dtos/                       # Data Transfer Objects for encapsulating data
+│   ├── EventDto.cs             # DTO for Event data
+│   ├── TicketDto.cs            # DTO for Ticket data
+│   └── UserDto.cs              # DTO for User data
+│
+├── Models/                     # Domain models representing database tables
+│   ├── Event.cs                # Event model
+│   ├── Ticket.cs               # Ticket model
+│   └── User.cs                 # User model
+│
+├── Repositories/               # Repositories for handling database operations
+│   ├── EventRepository.cs      # Repository for Event data
+│   ├── TicketRepository.cs     # Repository for Ticket data
+│   └── UserRepository.cs       # Repository for User data
+│
+├── Services/                   # Services for business logic
+│   ├── AuthenticationService.cs # Service for authentication-related logic
+│   └── BlockchainService.cs    # Service for blockchain interaction logic
+│
+├── wwwroot/                    # Static files for the API
+│
+├── appsettings.Development.json # Configuration settings for development environment
+├── appsettings.Production.json  # Configuration settings for production environment
+├── appsettings.json             # General configuration settings
+├── BlockchainTicketsAPI.csproj  # Project file
+├── Program.cs                   # Entry point of the API
+├── Startup.cs                   # Configures services and the app's request pipeline
+└── README.md                    # Project documentation
