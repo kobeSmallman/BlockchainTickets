@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "60CzD3vKezKWGwKpblcfhDijY2SpapFw83NagfyNH4lTNcLtloLKhZCZE0rSsIInnX96pKao61dA+6VSN1h+SA==",
+  "dgSpecHash": "37ClF7fTz1TsnsEYCwKfRjsDPZaKPqyVOG6XApwIWMiQZfyT5169Iw8jbs6B7F6k5Oj54eowlIDrPlbxDgKvYg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kobe4\\Source\\Repos\\BlockchainTickets\\BlockchainTicketsAPI\\BlockchainTicketsAPI.csproj",
   "expectedPackageFiles": [
@@ -30,8 +30,8 @@
     "C:\\Users\\kobe4\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\kobe4\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\kobe4\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
-    "C:\\Users\\kobe4\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512",
-    "C:\\Users\\kobe4\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.2\\npgsql.entityframeworkcore.postgresql.8.0.2.nupkg.sha512",
+    "C:\\Users\\kobe4\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
+    "C:\\Users\\kobe4\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.4\\npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
     "C:\\Users\\kobe4\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\kobe4\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\kobe4\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
