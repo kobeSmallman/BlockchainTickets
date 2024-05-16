@@ -85,7 +85,6 @@ app.MapGet("/testdbraw", async (ApplicationDbContext context) =>
 {
     try
     {
-        Console.WriteLine("Executing /testdbraw endpoint...");
         var conn = context.Database.GetDbConnection();
         await conn.OpenAsync();
         var command = conn.CreateCommand();
@@ -105,7 +104,6 @@ app.MapGet("/testdbraw", async (ApplicationDbContext context) =>
         }
 
         await conn.CloseAsync();
-        Console.WriteLine($"Fetched {results.Count} rows using raw SQL.");
         return Results.Ok(results.Any() ? results : new { Message = "No data found in the TestTable." });
     }
     catch (Exception ex)
@@ -114,5 +112,26 @@ app.MapGet("/testdbraw", async (ApplicationDbContext context) =>
         return Results.Problem($"Error during database access: {ex.Message}");
     }
 });
+app.MapGet("/checkdb", async (ApplicationDbContext context) =>
+{
+    var conn = context.Database.GetDbConnection();
+    await conn.OpenAsync();
+    var command = conn.CreateCommand();
+    command.CommandText = "SELECT current_database(), current_schema()";
+
+    using (var reader = await command.ExecuteReaderAsync())
+    {
+        while (await reader.ReadAsync())
+        {
+            var dbName = reader.GetString(0);
+            var schemaName = reader.GetString(1);
+            return Results.Ok(new { Database = dbName, Schema = schemaName });
+        }
+    }
+
+    await conn.CloseAsync();
+    return Results.Problem("Could not retrieve database and schema information.");
+});
+
 
 app.Run();

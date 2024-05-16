@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlockchainTicketsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9667bd44edfb477e0feff7e0126bd11e4305f72e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0347099d531d9d355186982fbcfd5efd991290b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlockchainTicketsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlockchainTicketsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
