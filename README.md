@@ -1,5 +1,7 @@
-# BlockchainTickets
+﻿# BlockchainTickets
 A blockchain solution for event tickets.
+
+if interested see bottom of page to see the goal of the project.
 
 # Connecting to the BlockchainTickets PostgreSQL Database
 
@@ -32,3 +34,118 @@ If you encounter issues:
 ## Support
 If you need further assistance, please contact me Kobe Smallman @ 587-370-1108.
 
+Dependency Injection (Startup.cs and Program.cs)
+This is recommended because it helps manage dependencies cleanly and efficiently across your application. It allows your app to be more modular and easier to test because it's not tightly coupled to specific implementations of services or components. In ASP.NET Core, dependency injection is set up in the Startup.cs and Program.cs files and is a key feature for developing scalable applications.
+
+Repository Pattern (Repositories folder)
+This pattern is beneficial if you expect your application to grow or anticipate changes in the database/storage implementations. By abstracting data access behind a consistent set of interfaces (repositories), you can change underlying database details with minimal impact on your business logic or API endpoints.
+
+Data Transfer Objects (DTOs folder)
+Using DTOs is recommended when you need to shape the data for the needs of your consumers without exposing internal models. For a web application that could potentially scale and involve various data consumers (like web and mobile apps), DTOs provide a way to send only necessary data in a format that's most useful to the client, enhancing both security and performance.
+# BlockchainTickets - Project Overview
+
+# File Structure
+
+## Frontend (`blockchain-tickets-ui`)
+blockchain-tickets-ui/
+├── public/
+│ ├── favicon.ico
+│ ├── index.html
+│ ├── logo192.png
+│ ├── logo512.png
+│ ├── manifest.json
+│ └── robots.txt
+├── src/
+│ ├── assets/
+│ │ └── main.css
+│ ├── components/
+│ │ ├── Footer/
+│ │ │ ├── index.js
+│ │ │ └── styles.css
+│ │ ├── Header/
+│ │ │ ├── index.js
+│ │ │ └── styles.css
+│ │ └── Layout/
+│ │ ├── index.js
+│ │ └── styles.css
+│ ├── pages/
+│ │ ├── Event/
+│ │ │ ├── index.js
+│ │ │ └── styles.css
+│ │ ├── Home/
+│ │ │ ├── index.js
+│ │ │ └── styles.css
+│ │ └── Login/
+│ │ ├── index.js
+│ │ └── styles.css
+│ ├── services/
+│ │ ├── authService.js
+│ │ └── blockchainService.js
+│ ├── App.js
+│ ├── App.css
+│ ├── index.js
+│ ├── index.css
+│ ├── reportWebVitals.js
+│ ├── setupTests.js
+│ └── logo.svg
+├── README.md
+├── package.json
+└── package-lock.json
+
+## Backend (`BlockchainTicketsAPI`)
+BlockchainTicketsAPI/
+├── Configurations/
+├── Controllers/
+│ ├── EventsController.cs
+│ ├── TicketsController.cs
+│ └── UsersController.cs
+├── Data/
+│ ├── ApplicationDbContext.cs
+├── Dtos/
+│ ├── EventDto.cs
+│ ├── TicketDto.cs
+│ └── UserDto.cs
+├── Models/
+│ ├── Event.cs
+│ ├── Ticket.cs
+│ └── User.cs
+├── Repositories/
+├── Services/
+│ ├── AuthenticationService.cs
+│ └── BlockchainService.cs
+├── wwwroot/
+├── appsettings.Development.json
+├── appsettings.Production.json
+├── appsettings.json
+├── BlockchainTicketsAPI.csproj
+├── Program.cs
+├── Startup.cs
+└── README.md
+
+
+## Goal
+BlockchainTickets aims to become a blockchain-based event ticketing platform that rivals traditional services like Ticketmaster. It leverages blockchain technology to enhance transparency, security, and efficiency in the ticketing process. This helps in minimizing fraud, unauthorized reselling, and providing a trustworthy experience for both event organizers and attendees.
+
+## Problem Being Solved
+Traditional ticketing systems often suffer from issues like fraud, high scalping, and a lack of control over the distribution of tickets after the initial sale. BlockchainTickets addresses these problems by embedding the ticketing process in a blockchain, ensuring each ticket is unique and securely owned.
+
+## Solution
+The platform utilizes blockchain to provide:
+- **Security and Authenticity:** Tickets are tamper-proof and their authenticity can be verified.
+- **Transparency:** Every transaction is recorded on a public ledger, visible to everyone but cannot be altered retroactively.
+- **Decentralized Control:** Reduces reliance on central authorities, mitigating risks associated with them.
+- **Reduced Scalping and Fraud:** Enforces rules about ticket reselling directly within the ticket using smart contracts.
+
+## Key Features
+- Secure ticket sales and transfers via blockchain.
+- Real-time availability and booking.
+- Detailed seating arrangements and venue selection.
+- User profiles for sellers and buyers.
+- Mobile and web access for ease of use.
+- Integration with payment gateways for secure transactions.
+
+## Technology Stack
+- **Frontend:** React for a dynamic and responsive user interface.
+- **Backend:** .NET Core for a scalable API.
+- **Database:** PostgreSQL for robust data management.
+- **Blockchain:** Ethereum for managing the ticket lifecycle and ensuring security.

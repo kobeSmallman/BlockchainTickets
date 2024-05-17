@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "fG+CbLBmm+Qqz0eIV2U2O1SD7+DrDZ/obiXRbFhdUg0=",
+  "Source": "BlockchainTicketsAPI",
+  "BasePath": "_content/BlockchainTicketsAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BlockchainTicketsAPI\\wwwroot",
+      "Source": "BlockchainTicketsAPI",
+      "ContentRoot": "C:\\Users\\kobe4\\Source\\Repos\\BlockchainTickets\\BlockchainTicketsAPI\\wwwroot\\",
+      "BasePath": "_content/BlockchainTicketsAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
