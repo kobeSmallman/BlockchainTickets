@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+    padding: 1rem 2rem;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    gap: 2rem; /* Space between the links */
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+  }
+  
