@@ -6,6 +6,11 @@
   
   main {
     flex: 1;
-    padding-bottom: 2rem; /* Space for the footer */
+    padding-top: 4rem; /* Space for the fixed header */
+    padding-bottom: 4rem; /* Space for the footer */
+  }
+  
+  footer {
+    margin-top: auto;
   }
   

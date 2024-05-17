@@ -3,8 +3,8 @@ import './styles.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <p>&copy; 2024 BlockchainTickets. All rights reserved.</p>
+    <footer className="footer">
+      <p>© 2024 BlockchainTickets. All rights reserved.</p>
     </footer>
   );
 };
