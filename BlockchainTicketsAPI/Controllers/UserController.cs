@@ -1,35 +1,39 @@
-using Microsoft.AspNetCore.Mvc;
-using BlockchainTicketsAPI.Services;
-using System.Threading.Tasks;
-
-[ApiController]
-[Route("api/[controller]")]
-public class UsersController : ControllerBase
+namespace BlockchainTicketsAPI.Controllers
 {
-    private readonly AuthenticationService _authService;
+    using BlockchainTicketsAPI.Services;
+    using Microsoft.AspNetCore.Mvc;
+    using System.Threading.Tasks;
 
-    public UsersController(AuthenticationService authService)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UserController : ControllerBase
     {
-        _authService = authService;
-    }
+        private readonly AuthenticationService _authenticationService;
 
-    [HttpPost("verifyToken")]
-    public async Task<IActionResult> VerifyToken([FromBody] string idToken)
-    {
-        var decodedToken = await _authService.VerifyTokenAsync(idToken);
-        return Ok(decodedToken);
-    }
+        public UserController(AuthenticationService authenticationService)
+        {
+            _authenticationService = authenticationService;
+        }
 
-    [HttpPost("createUser")]
-    public async Task<IActionResult> CreateUser([FromBody] UserCreationRequest request)
-    {
-        var user = await _authService.CreateUserAsync(request.Email, request.Password);
-        return Ok(user);
-    }
-}
+        [HttpPost("create")]
+        public async Task<IActionResult> CreateUser(string email, string password)
+        {
+            var userRecord = await _authenticationService.CreateUserAsync(email, password);
+            return Ok(userRecord);
+        }
 
-public class UserCreationRequest
-{
-    public string Email { get; set; }
-    public string Password { get; set; }
+        [HttpPost("verifyToken")]
+        public async Task<IActionResult> VerifyToken(string idToken)
+        {
+            var decodedToken = await _authenticationService.VerifyTokenAsync(idToken);
+            return Ok(decodedToken);
+        }
+
+        [HttpGet("{uid}")]
+        public async Task<IActionResult> GetUserById(string uid)
+        {
+            var userRecord = await _authenticationService.GetUserByIdAsync(uid);
+            return Ok(userRecord);
+        }
+    }
 }

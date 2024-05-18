@@ -1,12 +1,20 @@
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\appsettings.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Configs\serviceAccountKey.json
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\firebaseConfig.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\BlockchainTicketsAPI.staticwebassets.runtime.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\BlockchainTicketsAPI.exe
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\BlockchainTicketsAPI.deps.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\BlockchainTicketsAPI.runtimeconfig.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\BlockchainTicketsAPI.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\BlockchainTicketsAPI.pdb
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\FirebaseAdmin.dll
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Google.Api.Gax.dll
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Google.Api.Gax.Rest.dll
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Google.Apis.dll
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Google.Apis.Auth.dll
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Google.Apis.Core.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Humanizer.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -21,6 +29,7 @@ C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Npgsql.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -32,6 +41,7 @@ C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\System.Composition.Hosting.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\System.Management.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -84,6 +94,7 @@ C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\obj\Debug\net8.0\BlockchainTicketsAPI.csproj.AssemblyReference.cache
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\obj\Debug\net8.0\BlockchainTicketsAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\obj\Debug\net8.0\BlockchainTicketsAPI.AssemblyInfoInputs.cache

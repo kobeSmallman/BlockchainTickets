@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using BlockchainTicketsAPI.Data;
-using BlockchainTicketsAPI.Models;
 using BlockchainTicketsAPI.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -35,6 +34,11 @@ builder.Configuration.AddJsonFile("firebaseConfig.json", optional: false, reload
 
 // Load the Firebase configuration
 var firebaseConfig = builder.Configuration.GetSection("Firebase").Get<FirebaseConfig>();
+
+if (firebaseConfig == null || string.IsNullOrEmpty(firebaseConfig.ProjectId) || string.IsNullOrEmpty(firebaseConfig.CredentialPath))
+{
+    throw new Exception("Firebase configuration is missing or incomplete.");
+}
 
 // Get the relative path to the service account key
 var credentialPath = Path.Combine(Directory.GetCurrentDirectory(), firebaseConfig.CredentialPath);
@@ -67,6 +71,6 @@ app.Run();
 // FirebaseConfig class to map the JSON configuration
 public class FirebaseConfig
 {
-    public string ProjectId { get; set; }
-    public string CredentialPath { get; set; }
+    public string ProjectId { get; set; } = string.Empty;
+    public string CredentialPath { get; set; } = string.Empty;
 }
