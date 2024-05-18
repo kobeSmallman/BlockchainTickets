@@ -9,9 +9,8 @@ using BlockchainTicketsAPI.Data;
 using BlockchainTicketsAPI.Models;
 using BlockchainTicketsAPI.Services;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+using System;
+using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +33,19 @@ builder.Services.AddSingleton<AuthenticationService>();
 // Add configuration for Firebase
 builder.Configuration.AddJsonFile("firebaseConfig.json", optional: false, reloadOnChange: true);
 
+// Load the Firebase configuration
+var firebaseConfig = builder.Configuration.GetSection("Firebase").Get<FirebaseConfig>();
+
+// Get the relative path to the service account key
+var credentialPath = Path.Combine(Directory.GetCurrentDirectory(), firebaseConfig.CredentialPath);
+
+// Initialize Firebase
+FirebaseApp.Create(new AppOptions()
+{
+    Credential = GoogleCredential.FromFile(credentialPath),
+    ProjectId = firebaseConfig.ProjectId
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -51,3 +63,10 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// FirebaseConfig class to map the JSON configuration
+public class FirebaseConfig
+{
+    public string ProjectId { get; set; }
+    public string CredentialPath { get; set; }
+}
