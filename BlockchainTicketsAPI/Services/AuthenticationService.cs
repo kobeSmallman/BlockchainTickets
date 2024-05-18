@@ -1,11 +1,11 @@
+using FirebaseAdmin;
+using FirebaseAdmin.Auth;
+using Google.Apis.Auth.OAuth2;
+using Microsoft.Extensions.Configuration;
+using System.Threading.Tasks;
+
 namespace BlockchainTicketsAPI.Services
 {
-    using FirebaseAdmin;
-    using FirebaseAdmin.Auth;
-    using Google.Apis.Auth.OAuth2;
-    using Microsoft.Extensions.Configuration;
-    using System.Threading.Tasks;
-
     public class AuthenticationService
     {
         private readonly FirebaseApp _firebaseApp;

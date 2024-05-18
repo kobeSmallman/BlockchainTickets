@@ -1,39 +1,34 @@
+// UserController.cs
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using BlockchainTicketsAPI.Services;
+using System;
+
 namespace BlockchainTicketsAPI.Controllers
 {
-    using BlockchainTicketsAPI.Services;
-    using Microsoft.AspNetCore.Mvc;
-    using System.Threading.Tasks;
-
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly AuthenticationService _authenticationService;
+        private readonly AuthenticationService _authService;
 
-        public UserController(AuthenticationService authenticationService)
+        public UserController(AuthenticationService authService)
         {
-            _authenticationService = authenticationService;
+            _authService = authService;
         }
 
-        [HttpPost("create")]
-        public async Task<IActionResult> CreateUser(string email, string password)
+        [HttpPost("verify")]
+        public async Task<IActionResult> Verify([FromBody] string idToken)
         {
-            var userRecord = await _authenticationService.CreateUserAsync(email, password);
-            return Ok(userRecord);
-        }
-
-        [HttpPost("verifyToken")]
-        public async Task<IActionResult> VerifyToken(string idToken)
-        {
-            var decodedToken = await _authenticationService.VerifyTokenAsync(idToken);
-            return Ok(decodedToken);
-        }
-
-        [HttpGet("{uid}")]
-        public async Task<IActionResult> GetUserById(string uid)
-        {
-            var userRecord = await _authenticationService.GetUserByIdAsync(uid);
-            return Ok(userRecord);
+            try
+            {
+                var decodedToken = await _authService.VerifyTokenAsync(idToken);
+                return Ok(decodedToken);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
     }
 }
