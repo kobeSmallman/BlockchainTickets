@@ -1,38 +1,54 @@
 import React, { useState } from 'react';
-import { sendSignInLinkToEmail } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebaseconfig';
+import './styles.css';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const actionCodeSettings = {
-    url: 'http://localhost:3000/finishSignUp',
-    handleCodeInApp: true,
-    iOS: { bundleId: 'com.example.ios' },
-    android: { packageName: 'com.example.android', installApp: true, minimumVersion: '12' },
-    dynamicLinkDomain: 'example.page.link'
-  };
+  const [identifier, setIdentifier] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleLogin = async () => {
     try {
-      await sendSignInLinkToEmail(auth, email, actionCodeSettings);
-      window.localStorage.setItem('emailForSignIn', email);
-      alert('Email sent!');
+      let email = identifier;
+
+      if (!identifier.includes('@')) {
+        const response = await fetch(`/api/user/getEmailByUsername/${identifier}`);
+        if (response.ok) {
+          const data = await response.json();
+          email = data.email;
+        } else {
+          throw new Error('Failed to fetch email by username');
+        }
+      }
+
+      await signInWithEmailAndPassword(auth, email, password);
+      alert('Login successful!');
     } catch (error) {
       console.error(error);
-      alert('Error sending email');
+      setError(error.message);
     }
   };
 
   return (
-    <div>
+    <div className="auth-container">
       <h1>Login</h1>
       <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
+        type="text"
+        value={identifier}
+        onChange={(e) => setIdentifier(e.target.value)}
+        placeholder="Enter your username or email"
+        className="auth-input"
       />
-      <button onClick={handleLogin}>Send Login Link</button>
+      <input
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Enter your password"
+        className="auth-input"
+      />
+      <button onClick={handleLogin} className="auth-button">Login</button>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   );
 };

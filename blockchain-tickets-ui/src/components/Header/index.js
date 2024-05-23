@@ -13,7 +13,10 @@ const Header = () => {
           Events
         </NavLink>
         <NavLink to="/login" activeClassName="active">
-          Login/Register
+          Login
+        </NavLink>
+        <NavLink to="/register" activeClassName="active">
+          Register
         </NavLink>
       </nav>
     </header>
