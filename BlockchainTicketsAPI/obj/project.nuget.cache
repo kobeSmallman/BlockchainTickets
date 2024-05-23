@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MQ4GvUF6u3PEQAFZFIcPUPJN4ocDXNaQqhxL4PGXdgMiJDjYq41WI/WiQHANuONVyXzyxbgJjv2WP/hoic62Bg==",
+  "dgSpecHash": "ijCBvuyI5+i3chAcHxh75tKiHI1lmqpuELRdD2KfbPtxa0fRQNSbeTWdh8c63kIVse469bXyB76k+lI0940SVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kobe4\\Source\\Repos\\BlockchainTickets\\BlockchainTicketsAPI\\BlockchainTicketsAPI.csproj",
+  "projectFilePath": "C:\\Users\\kobe4\\codingProjects\\ticketWebApp\\BlockchainTickets\\BlockchainTicketsAPI\\BlockchainTicketsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kobe4\\.nuget\\packages\\firebaseadmin\\3.0.0\\firebaseadmin.3.0.0.nupkg.sha512",
     "C:\\Users\\kobe4\\.nuget\\packages\\google.api.gax\\4.8.0\\google.api.gax.4.8.0.nupkg.sha512",
