@@ -1,0 +1,45 @@
+/* blockchain-tickets-ui/src/components/Filters/styles.css */
+
+.filters {
+    margin-bottom: 2rem;
+  }
+  
+  .filters h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .filters__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .filter-control {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+  }
+  
+  .filter-control label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .filter-control input {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .price-range {
+    display: flex;
+    align-items: center;
+  }
+  
+  .price-range input {
+    width: 100%;
+  }
+  
+  .price-range span {
+    margin: 0 0.5rem;
+  }
+  

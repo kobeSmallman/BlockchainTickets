@@ -1,7 +1,10 @@
+// blockchain-tickets-ui/src/App.js
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Event from './pages/Event';
+import EventDetails from './pages/EventDetails'; // Import EventDetails page
 import Login from './pages/Login';
 import FinishSignUp from './pages/FinishSignUp';
 import AdminRegistration from './pages/AdminRegistration';
@@ -22,6 +25,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/event" element={<Event />} />
+          <Route path="/event/:eventId" element={<EventDetails />} /> {/* Add this route */}
           <Route path="/login" element={<Login />} />
           <Route path="/finishSignUp" element={<FinishSignUp />} />
           <Route path="/admin-register" element={<AdminRegistration />} />
