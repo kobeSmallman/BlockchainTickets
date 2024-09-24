@@ -1,6 +1,7 @@
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\appsettings.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Configs\firebaseConfig.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Configs\serviceAccountKey.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\BlockchainTicketsAPI.staticwebassets.runtime.json
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\BlockchainTicketsAPI.exe
@@ -116,4 +117,3 @@ C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\obj\Debug\net
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\obj\Debug\net8.0\BlockchainTicketsAPI.pdb
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\obj\Debug\net8.0\BlockchainTicketsAPI.genruntimeconfig.cache
 C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\obj\Debug\net8.0\ref\BlockchainTicketsAPI.dll
-C:\Users\kobe4\Source\Repos\BlockchainTickets\BlockchainTicketsAPI\bin\Debug\net8.0\Configs\firebaseConfig.json

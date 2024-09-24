@@ -24,8 +24,8 @@ builder.Logging.SetMinimumLevel(LogLevel.Debug);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("BlockchainDb"))
-           .EnableSensitiveDataLogging() // Enable sensitive data logging
-           .LogTo(Console.WriteLine, LogLevel.Information)); // Log to console
+           .EnableSensitiveDataLogging()
+           .LogTo(Console.WriteLine, LogLevel.Information));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

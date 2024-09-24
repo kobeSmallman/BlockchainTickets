@@ -1,49 +1,32 @@
 ﻿# BlockchainTickets
 A blockchain solution for event tickets.
 
-if interested see bottom of page to see the goal of the project.
+## Goal
+BlockchainTickets aims to become a blockchain-based event ticketing platform that rivals traditional services like Ticketmaster. It leverages blockchain technology to enhance transparency, security, and efficiency in the ticketing process. This helps in minimizing fraud, unauthorized reselling, and providing a trustworthy experience for both event organizers and attendees.
 
-# Connecting to the BlockchainTickets PostgreSQL Database
+## Problem Being Solved
+Traditional ticketing systems often suffer from issues like fraud, high scalping, and a lack of control over the distribution of tickets after the initial sale. BlockchainTickets addresses these problems by embedding the ticketing process in a blockchain, ensuring each ticket is unique and securely owned.
 
-## Prerequisites
-- pgAdmin 4 installed on your machine.
-- Your IP address must be whitelisted in the AWS Security Group so let me know what oyur ip is from typing whatismyipaddress in a web browser clicking on first link and telling me that value. (if you are coding from multiople locations, I may need to add the other locations as well to whitelist you). Set up remote desktop at your home computer if this is going to be an ongoing issue with coding from a bunch of different locations otherwise we alllll gooooddd.
+## Solution
+The platform utilizes blockchain to provide:
+- **Security and Authenticity:** Tickets are tamper-proof and their authenticity can be verified.
+- **Transparency:** Every transaction is recorded on a public ledger, visible to everyone but cannot be altered retroactively.
+- **Decentralized Control:** Reduces reliance on central authorities, mitigating risks associated with them.
+- **Reduced Scalping and Fraud:** Enforces rules about ticket reselling directly within the ticket using smart contracts.
 
-## Steps to Connect
-1. Open pgAdmin 4.
-2. Right-click on 'Servers' and select 'Create' > 'Server'.
-3. In the 'Create - Server' dialog:
-   - General Tab:
-     - Name: Enter a name for the connection (e.g., 'BlockchainTickets DB').
-   - Connection Tab:
-     - Host name/address: text me for this. 
-     - Port: `5432`
-     - Maintenance database: `postgres`
-     - Username: `YourUsername` (text me when you get to this part)
-     - Password: `YourPassword` (Do not share this in the guide) (text me when you get to this part)
-     - Click "Save Password?" if you do not want to enter it each time.
-4. Click 'Save' to register the server.
-5. You should now see the server in the left sidebar. Click on it to connect.
+## Key Features
+- Secure ticket sales and transfers via blockchain.
+- Real-time availability and booking.
+- Detailed seating arrangements and venue selection.
+- User profiles for sellers and buyers.
+- Mobile and web access for ease of use.
+- Integration with payment gateways for secure transactions.
 
-## Troubleshooting
-If you encounter issues:
-- Verify your network connection.
-- Ensure your IP is still whitelisted.
-- Double-check the credentials and endpoint.
-
-## Support
-If you need further assistance, please contact me Kobe Smallman @ 587-370-1108.
-
-Dependency Injection (Startup.cs and Program.cs)
-This is recommended because it helps manage dependencies cleanly and efficiently across your application. It allows your app to be more modular and easier to test because it's not tightly coupled to specific implementations of services or components. In ASP.NET Core, dependency injection is set up in the Startup.cs and Program.cs files and is a key feature for developing scalable applications.
-
-Repository Pattern (Repositories folder)
-This pattern is beneficial if you expect your application to grow or anticipate changes in the database/storage implementations. By abstracting data access behind a consistent set of interfaces (repositories), you can change underlying database details with minimal impact on your business logic or API endpoints.
-
-Data Transfer Objects (DTOs folder)
-Using DTOs is recommended when you need to shape the data for the needs of your consumers without exposing internal models. For a web application that could potentially scale and involve various data consumers (like web and mobile apps), DTOs provide a way to send only necessary data in a format that's most useful to the client, enhancing both security and performance.
-
-# BlockchainTickets - Project Overview
+## Technology Stack
+- **Frontend:** React for a dynamic and responsive user interface.
+- **Backend:** .NET Core for a scalable API.
+- **Database:** PostgreSQL for robust data management.
+- **Blockchain:** Ethereum for managing the ticket lifecycle and ensuring security.
 
 ## File Structure
 
@@ -123,77 +106,158 @@ BlockchainTicketsAPI/
 ├── Startup.cs
 └── README.md
 
-## Goal
-BlockchainTickets aims to become a blockchain-based event ticketing platform that rivals traditional services like Ticketmaster. It leverages blockchain technology to enhance transparency, security, and efficiency in the ticketing process. This helps in minimizing fraud, unauthorized reselling, and providing a trustworthy experience for both event organizers and attendees.
+## Connecting to the BlockchainTickets PostgreSQL Database
 
-## Problem Being Solved
-Traditional ticketing systems often suffer from issues like fraud, high scalping, and a lack of control over the distribution of tickets after the initial sale. BlockchainTickets addresses these problems by embedding the ticketing process in a blockchain, ensuring each ticket is unique and securely owned.
+### Prerequisites
+- pgAdmin 4 installed on your machine.
+- Your IP address must be whitelisted in the AWS Security Group. To find your IP address, type `whatismyipaddress` in a web browser, click on the first link, and provide the value displayed. (If you are coding from multiple locations, I may need to add the other locations to the whitelist as well. Set up remote desktop at your home computer if this is going to be an ongoing issue with coding from various locations.)
 
-## Solution
-The platform utilizes blockchain to provide:
-- **Security and Authenticity:** Tickets are tamper-proof and their authenticity can be verified.
-- **Transparency:** Every transaction is recorded on a public ledger, visible to everyone but cannot be altered retroactively.
-- **Decentralized Control:** Reduces reliance on central authorities, mitigating risks associated with them.
-- **Reduced Scalping and Fraud:** Enforces rules about ticket reselling directly within the ticket using smart contracts.
+### Steps to Connect
+1. Open pgAdmin 4.
+2. Right-click on 'Servers' and select 'Create' > 'Server'.
+3. In the 'Create - Server' dialog:
+   - General Tab:
+     - Name: Enter a name for the connection (e.g., 'BlockchainTickets DB').
+   - Connection Tab:
+     - Host name/address: text me for this.
+     - Port: `5432`
+     - Maintenance database: `postgres`
+     - Username: `YourUsername` (text me when you get to this part)
+     - Password: `YourPassword` (Do not share this in the guide) (text me when you get to this part)
+     - Click "Save Password?" if you do not want to enter it each time.
+4. Click 'Save' to register the server.
+5. You should now see the server in the left sidebar. Click on it to connect.
 
-## Key Features
-- Secure ticket sales and transfers via blockchain.
-- Real-time availability and booking.
-- Detailed seating arrangements and venue selection.
-- User profiles for sellers and buyers.
-- Mobile and web access for ease of use.
-- Integration with payment gateways for secure transactions.
+### Troubleshooting
+If you encounter issues:
+- Verify your network connection.
+- Ensure your IP is still whitelisted.
+- Double-check the credentials and endpoint.
 
-## Technology Stack
-- **Frontend:** React for a dynamic and responsive user interface.
-- **Backend:** .NET Core for a scalable API.
-- **Database:** PostgreSQL for robust data management.
-- **Blockchain:** Ethereum for managing the ticket lifecycle and ensuring security.
+### Support
+If you need further assistance, please contact Kobe Smallman @ 587-370-1108.
 
-## Current Status
+## Use Case of Different Regions
+### Overview
+Deploying databases in different regions allows you to improve performance for users in various locations, enhance redundancy, and ensure availability. Each AWS region can have its own database instance, and you can connect to the appropriate instance based on your requirements.
 
-### User Login and Registration
-- **User Registration**: Users can register on the platform by providing their email, password, and other necessary details.
-- **User Login**: Registered users can log in using their email and password.
-- **Authentication**: User authentication is handled securely, ensuring that user data is protected.
+### Benefits
+- **Reduced Latency:** By placing your database closer to users, you can reduce the time it takes for data to travel, resulting in faster response times.
+- **Disaster Recovery:** Having databases in multiple regions ensures that if one region goes down, you can switch to a database in another region with minimal downtime.
+- **Geographic Data Distribution:** Helps in complying with data sovereignty laws by storing data in specific regions.
 
-### Plan for Testing
-- **Unit Tests**: We have implemented unit tests for the smart contract functions to ensure they work as expected.
-- **Integration Tests**: Integration tests are in place to test the entire flow from user registration to ticket purchase.
-- **User Testing**: We will invite a group of users to test the application on the testnet and provide feedback.
-- **Security Audits**: We plan to conduct security audits of our smart contract code to identify and fix any vulnerabilities.
-- **Bug Bounty Program**: A bug bounty program will be launched to encourage the community to find and report bugs.
+### Example
+For now, we are using the Canada Central (ca-central-1) region:
+Endpoint: blockchainticket.chugii0cqkye.ca-central-1.rds.amazonaws.com
 
-## Next Steps
+In the future, if we decide to expand, we could have endpoints in other regions like US West (Oregon) or EU (Frankfurt) for better global coverage.
 
-### Software Wallet Integration
-The next step in our project is to integrate a software wallet, such as MetaMask, to allow users to purchase tickets using cryptocurrency. This will involve:
+### Configuration
+Ensure your `appsettings.json` points to the correct endpoint for the region you are using:
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "BlockchainDb": "Host=blockchainticket.chugii0cqkye.ca-central-1.rds.amazonaws.com;Port=5432;Database=postgres;Username=postgres;Password=Contact me or you should already know.;"
+  }
+}
+## Database Tables and Relationships
 
-1. **Frontend Integration with MetaMask**:
-   - Prompt users to connect their MetaMask wallet to the application.
-   - Use `web3.js` or `ethers.js` to interact with the Ethereum blockchain.
+### Users Table
+- **Fields:** UserId, Username, Email, PasswordHash, Role, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - One-to-Many with Tickets
+  - One-to-Many with Feedbacks
+  - One-to-Many with Wallets
+  - One-to-Many with Notifications
+  - One-to-Many with UserRoles
+  - One-to-Many with Transactions (as Buyer and Seller)
 
-2. **Smart Contract Development**:
-   - Develop and deploy a smart contract to handle ticket sales and enforce resale limitations.
+### Venues Table
+- **Fields:** VenueId, VenueName, Location, Capacity, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - One-to-Many with Events
 
-3. **Backend Integration**:
-   - Ensure the backend can interact with the deployed smart contract and handle transactions.
+### Events Table
+- **Fields:** EventId, EventName, Description, VenueId, EventDate, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - One-to-Many with Tickets
+  - One-to-Many with Feedbacks
+  - One-to-Many with EventCategoryMappings
+  - Many-to-One with Venues
 
-4. **Testing**:
-   - Deploy the smart contract to an Ethereum testnet (e.g., Ropsten or Rinkeby).
-   - Test the entire flow from ticket purchase to resale using test accounts.
-   - Conduct security audits and user testing to ensure the system is secure and functional.
+### Tickets Table
+- **Fields:** TicketId, EventId, OwnerId, Price, IsResold, IsResellable, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Users
+  - Many-to-One with Events
+  - One-to-Many with Transactions
+  - One-to-Many with TicketLogs
 
-### Testing Plan
-- **Ethereum Testnet**: We will deploy our smart contract to a popular Ethereum testnet like Ropsten or Rinkeby to simulate real-life scenarios.
-- **Unit Tests**: Write comprehensive unit tests for all smart contract functions.
-- **Integration Tests**: Test the integration of the frontend, backend, and smart contract.
-- **User Testing**: Invite users to test the application on the testnet and provide feedback.
-- **Security Audits**: Conduct regular security audits to identify and fix vulnerabilities.
-- **Bug Bounty Program**: Launch a bug bounty program to encourage the community to find and report bugs.
+### Roles Table
+- **Fields:** RoleId, RoleName, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - One-to-Many with UserRoles
+  - One-to-Many with RolePermissions
 
-## How to Contribute
-We welcome contributions from the community. Please fork the repository and submit pull requests for any improvements or bug fixes.
+### Permissions Table
+- **Fields:** PermissionId, PermissionName, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - One-to-Many with RolePermissions
 
-## License
-This project is licensed under the MIT License.
+### UserRoles Table
+- **Fields:** UserRoleId, UserId, RoleId, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Users
+  - Many-to-One with Roles
+
+### RolePermissions Table
+- **Fields:** RolePermissionId, RoleId, PermissionId, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Roles
+  - Many-to-One with Permissions
+
+### Feedbacks Table
+- **Fields:** FeedbackId, EventId, UserId, Rating, Comment, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Events
+  - Many-to-One with Users
+
+### Wallets Table
+- **Fields:** WalletId, UserId, WalletAddress, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Users
+
+### Notifications Table
+- **Fields:** NotificationId, UserId, Message, IsRead, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Users
+
+### Transactions Table
+- **Fields:** TransactionId, TicketId, BuyerId, SellerId, TransactionDate, TransactionAmount, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Tickets
+  - Many-to-One with Users (Buyer and Seller)
+
+### TicketLogs Table
+- **Fields:** TicketLogId, TicketId, Action, PerformedBy, ActionDate, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Tickets
+  - Many-to-One with Users
+
+### EventCategories Table
+- **Fields:** EventCategoryId, CategoryName, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - One-to-Many with EventCategoryMappings
+
+### EventCategoryMappings Table
+- **Fields:** EventCategoryMappingId, EventId, EventCategoryId, CreatedAt, UpdatedAt
+- **Relationships:** 
+  - Many-to-One with Events
+  - Many-to-One with EventCategories
