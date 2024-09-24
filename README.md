@@ -106,7 +106,6 @@ BlockchainTicketsAPI/
 ├── Startup.cs
 └── README.md
 
-
 ## Connecting to the BlockchainTickets PostgreSQL Database
 
 ### Prerequisites

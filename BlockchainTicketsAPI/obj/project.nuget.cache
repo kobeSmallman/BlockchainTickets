@@ -1,8 +1,12 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "2YIPABXFBzTgYmm8JGzLF1HU0ZRcq004k3kDw/1Qv/gFMvEVhwpzm8myadxE92EDLjL1NAnmeEEzorPYeNUiBA==",
+=======
+  "dgSpecHash": "ijCBvuyI5+i3chAcHxh75tKiHI1lmqpuELRdD2KfbPtxa0fRQNSbeTWdh8c63kIVse469bXyB76k+lI0940SVA==",
+>>>>>>> 7485219e936ec980282b2f9919289ce4d8148198
   "success": true,
-  "projectFilePath": "C:\\Users\\kobe4\\Source\\Repos\\BlockchainTickets\\BlockchainTicketsAPI\\BlockchainTicketsAPI.csproj",
+  "projectFilePath": "C:\\Users\\kobe4\\codingProjects\\ticketWebApp\\BlockchainTickets\\BlockchainTicketsAPI\\BlockchainTicketsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kobe4\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\kobe4\\.nuget\\packages\\firebaseadmin\\3.0.0\\firebaseadmin.3.0.0.nupkg.sha512",

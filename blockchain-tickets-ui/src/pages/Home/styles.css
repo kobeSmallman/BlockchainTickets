@@ -1,46 +1,226 @@
-/* styles.css */
-.banner {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* 80% of the viewport height */
-    overflow: hidden;
+/* blockchain-tickets-ui/src/pages/Home/styles.css */
+
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn--primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: #0056b3;
+}
+
+.btn--secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Adjusted height to accommodate fixed header */
+  overflow: hidden;
+  margin-top: 4rem; /* Space for the fixed header */
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero__title {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  color: #ddd;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.features__grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  flex: 1 1 300px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  margin-bottom: 1rem;
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.how-it-works__steps {
+  list-style: none;
+}
+
+.how-it-works__steps li {
+  margin-bottom: 2rem;
+}
+
+.how-it-works__steps h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.testimonials__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  font-style: italic;
+  position: relative;
+}
+
+.testimonial::before {
+  content: '“';
+  font-size: 4rem;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  color: #007bff;
+}
+
+.testimonial h4 {
+  margin-top: 1rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Partners Section */
+.partners {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.partners h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.partners__logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
   }
-  
-  .banner video {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
+
+  .hero__subtitle {
+    font-size: 1.2rem;
   }
-  
-  .selection {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .selection select {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-  
-  /* Ensure footer does not overlap content */
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
-  #root {
-    display: flex;
+
+  .features__grid,
+  .testimonials__container {
     flex-direction: column;
-    min-height: 100vh;
   }
-  
-  main {
-    flex: 1;
-    padding-bottom: 2rem; /* Space for the footer */
+
+  .hero__cta {
+    flex-direction: column;
   }
-  
+}

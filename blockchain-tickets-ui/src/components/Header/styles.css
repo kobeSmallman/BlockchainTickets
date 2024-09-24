@@ -1,26 +1,114 @@
+/* styles.css */
+
 .header {
-    position: fixed;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    z-index: 1000;
-    padding: 1rem 2rem;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: center; /* Center the navigation links */
-    gap: 2rem; /* Space between the links */
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  .nav a.active {
-    font-weight: bold;
-    border-bottom: 2px solid white;
-  }
-  
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  color: #333;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo img {
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #007bff; /* Use your primary brand color */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav a:hover::after,
+.nav__link--active::after {
+  width: 100%;
+}
+
+.header__profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile__dropdown {
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+.profile__name {
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1001;
+}
+
+.header__profile:hover .dropdown__menu {
+  display: block;
+}
+
+.dropdown__menu a,
+.dropdown__menu button {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown__menu a:hover,
+.dropdown__menu button:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown__menu button {
+  cursor: pointer;
+}
