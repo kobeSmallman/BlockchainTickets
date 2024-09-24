@@ -1,9 +1,28 @@
+/* blockchain-tickets-ui/src/components/Footer/styles.css */
+
 .footer {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-  }
-  
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.footer__links {
+  margin-bottom: 1rem;
+}
+
+.footer__links a {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer__links a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}

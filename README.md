@@ -42,11 +42,12 @@ This pattern is beneficial if you expect your application to grow or anticipate 
 
 Data Transfer Objects (DTOs folder)
 Using DTOs is recommended when you need to shape the data for the needs of your consumers without exposing internal models. For a web application that could potentially scale and involve various data consumers (like web and mobile apps), DTOs provide a way to send only necessary data in a format that's most useful to the client, enhancing both security and performance.
+
 # BlockchainTickets - Project Overview
 
-# File Structure
+## File Structure
 
-## Frontend (`blockchain-tickets-ui`)
+### Frontend (`blockchain-tickets-ui`)
 blockchain-tickets-ui/
 ├── public/
 │ ├── favicon.ico
@@ -92,7 +93,7 @@ blockchain-tickets-ui/
 ├── package.json
 └── package-lock.json
 
-## Backend (`BlockchainTicketsAPI`)
+### Backend (`BlockchainTicketsAPI`)
 BlockchainTicketsAPI/
 ├── Configurations/
 ├── Controllers/
@@ -122,7 +123,6 @@ BlockchainTicketsAPI/
 ├── Startup.cs
 └── README.md
 
-
 ## Goal
 BlockchainTickets aims to become a blockchain-based event ticketing platform that rivals traditional services like Ticketmaster. It leverages blockchain technology to enhance transparency, security, and efficiency in the ticketing process. This helps in minimizing fraud, unauthorized reselling, and providing a trustworthy experience for both event organizers and attendees.
 
@@ -149,3 +149,51 @@ The platform utilizes blockchain to provide:
 - **Backend:** .NET Core for a scalable API.
 - **Database:** PostgreSQL for robust data management.
 - **Blockchain:** Ethereum for managing the ticket lifecycle and ensuring security.
+
+## Current Status
+
+### User Login and Registration
+- **User Registration**: Users can register on the platform by providing their email, password, and other necessary details.
+- **User Login**: Registered users can log in using their email and password.
+- **Authentication**: User authentication is handled securely, ensuring that user data is protected.
+
+### Plan for Testing
+- **Unit Tests**: We have implemented unit tests for the smart contract functions to ensure they work as expected.
+- **Integration Tests**: Integration tests are in place to test the entire flow from user registration to ticket purchase.
+- **User Testing**: We will invite a group of users to test the application on the testnet and provide feedback.
+- **Security Audits**: We plan to conduct security audits of our smart contract code to identify and fix any vulnerabilities.
+- **Bug Bounty Program**: A bug bounty program will be launched to encourage the community to find and report bugs.
+
+## Next Steps
+
+### Software Wallet Integration
+The next step in our project is to integrate a software wallet, such as MetaMask, to allow users to purchase tickets using cryptocurrency. This will involve:
+
+1. **Frontend Integration with MetaMask**:
+   - Prompt users to connect their MetaMask wallet to the application.
+   - Use `web3.js` or `ethers.js` to interact with the Ethereum blockchain.
+
+2. **Smart Contract Development**:
+   - Develop and deploy a smart contract to handle ticket sales and enforce resale limitations.
+
+3. **Backend Integration**:
+   - Ensure the backend can interact with the deployed smart contract and handle transactions.
+
+4. **Testing**:
+   - Deploy the smart contract to an Ethereum testnet (e.g., Ropsten or Rinkeby).
+   - Test the entire flow from ticket purchase to resale using test accounts.
+   - Conduct security audits and user testing to ensure the system is secure and functional.
+
+### Testing Plan
+- **Ethereum Testnet**: We will deploy our smart contract to a popular Ethereum testnet like Ropsten or Rinkeby to simulate real-life scenarios.
+- **Unit Tests**: Write comprehensive unit tests for all smart contract functions.
+- **Integration Tests**: Test the integration of the frontend, backend, and smart contract.
+- **User Testing**: Invite users to test the application on the testnet and provide feedback.
+- **Security Audits**: Conduct regular security audits to identify and fix vulnerabilities.
+- **Bug Bounty Program**: Launch a bug bounty program to encourage the community to find and report bugs.
+
+## How to Contribute
+We welcome contributions from the community. Please fork the repository and submit pull requests for any improvements or bug fixes.
+
+## License
+This project is licensed under the MIT License.

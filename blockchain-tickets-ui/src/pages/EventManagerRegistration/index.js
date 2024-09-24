@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebaseconfig';
 import './styles.css';
 
-const FinishSignUp = () => {
+const EventManagerRegistration = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
@@ -16,7 +16,7 @@ const FinishSignUp = () => {
 
       const idToken = await user.getIdToken();
 
-      const response = await fetch('http://localhost:5171/api/user/create-regularuser', {
+      const response = await fetch('https://localhost:7232/api/user/create-eventmanager', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,15 +26,15 @@ const FinishSignUp = () => {
           uid: user.uid,
           username: username,
           email: email,
-          role: 'Regular User', // Hardcoded role as 'Regular User' for now
-          passwordHash: password
+          roleid: 2, // Hardcoded roleId for Event Manager
+          passwordhash: password
         })
       });
 
       if (response.ok) {
         const responseData = await response.json();
-        console.log('User registered successfully:', responseData);
-        alert('User registered successfully!');
+        console.log('Event Manager registered successfully:', responseData);
+        alert('Event Manager registered successfully!');
       } else {
         const errorText = await response.text();
         throw new Error(`Failed to save additional user info: ${errorText}`);
@@ -47,7 +47,7 @@ const FinishSignUp = () => {
 
   return (
     <div className="auth-container">
-      <h1>Finish Sign Up</h1>
+      <h1>Event Manager Registration</h1>
       <input
         type="text"
         value={username}
@@ -75,4 +75,4 @@ const FinishSignUp = () => {
   );
 };
 
-export default FinishSignUp;
+export default EventManagerRegistration;

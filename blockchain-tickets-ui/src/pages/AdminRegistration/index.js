@@ -3,10 +3,10 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebaseconfig';
 import './styles.css';
 
-const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');
+const AdminRegistration = () => {
+  const [email, setEmail] = useState('test@test.com'); // Hardcoded admin email
+  const [password, setPassword] = useState('Password1'); // Hardcoded admin password
+  const [username, setUsername] = useState('Admin4'); // Hardcoded admin username
   const [error, setError] = useState('');
 
   const handleRegister = async () => {
@@ -14,34 +14,40 @@ const Register = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      const response = await fetch('/api/user/create', {
+      const idToken = await user.getIdToken();
+
+      const response = await fetch('https://localhost:7232/api/user/create-admin', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${idToken}`
         },
         body: JSON.stringify({
           uid: user.uid,
           username: username,
           email: email,
-          role: 'admin', // Hardcoded role as 'admin' for now
-          passwordHash: password
+          roleid: 1, // Hardcoded roleId for Admin
+          passwordhash: password
         })
       });
 
       if (response.ok) {
-        alert('User registered successfully!');
+        const responseData = await response.json();
+        console.log('Admin registered successfully:', responseData);
+        alert('Admin registered successfully!');
       } else {
-        throw new Error('Failed to save additional user info');
+        const errorText = await response.text();
+        throw new Error(`Failed to save additional user info: ${errorText}`);
       }
     } catch (error) {
-      console.error(error);
+      console.error('Error during registration:', error);
       setError(error.message);
     }
   };
 
   return (
     <div className="auth-container">
-      <h1>Register</h1>
+      <h1>Admin Registration</h1>
       <input
         type="text"
         value={username}
@@ -69,4 +75,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default AdminRegistration;
