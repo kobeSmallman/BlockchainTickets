@@ -1,10 +1,12 @@
-public class Event
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
+using System;
 
-    public Event()
+namespace BlockchainTicketsAPI.Models
+{
+    public class Event
     {
-        Name = string.Empty;  // Ensure non-null
+        public int eventid { get; set; }
+        public string eventname { get; set; } = string.Empty;
+        public DateTime createdat { get; set; }
+        public DateTime updatedat { get; set; }
     }
 }
