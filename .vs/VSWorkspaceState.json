@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BlockchainTicketsAPI"
+    "\\BlockchainTicketsAPI",
+    "\\BlockchainTicketsAPI\\Controllers",
+    "\\BlockchainTicketsAPI\\Data",
+    "\\BlockchainTicketsAPI\\Dtos",
+    "\\BlockchainTicketsAPI\\logs",
+    "\\BlockchainTicketsAPI\\Models",
+    "\\BlockchainTicketsAPI\\obj",
+    "\\BlockchainTicketsAPI\\Properties",
+    "\\BlockchainTicketsAPI\\Services"
   ],
-  "SelectedNode": "\\BlockchainTicketsAPI",
+  "SelectedNode": "\\BlockchainTicketsAPI\\Controllers\\UserController.cs",
   "PreviewInSolutionExplorer": false
 }

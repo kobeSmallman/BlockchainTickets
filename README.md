@@ -261,3 +261,88 @@ Ensure your `appsettings.json` points to the correct endpoint for the region you
 - **Relationships:** 
   - Many-to-One with Events
   - Many-to-One with EventCategories
+
+
+  TEST PLAN: 
+
+  Backend Testing Plan
+Unit Testing
+
+Objective: Verify that individual components of the backend, such as methods and classes, perform as expected.
+Tools: xUnit or NUnit.
+Scope: Focus on testing the business logic, data access logic, and services.
+Approach:
+Write tests for each method and class.
+Use mock objects to simulate dependencies and isolate the component under test.
+Ensure each test case covers both positive and negative scenarios.
+Integration Testing
+
+Objective: Ensure that different components of the backend work together as expected.
+Tools: xUnit or NUnit.
+Scope: Test the integration of controllers, services, and repositories.
+Approach:
+Test the interaction between controllers and services.
+Validate that data flows correctly from the controllers through the services to the repositories.
+Use a test database to verify that the data access logic performs correctly.
+API Testing
+
+Objective: Validate the API endpoints to ensure they handle requests and responses correctly.
+Tools: Postman or similar API testing tools.
+Scope: Test all API endpoints for correct functionality, including authentication, CRUD operations, and error handling.
+Approach:
+Create test cases for each API endpoint.
+Validate the request and response structure, including headers, status codes, and payload.
+Perform security testing to ensure endpoints are secure against common vulnerabilities (e.g., SQL injection, XSS).
+Performance Testing
+
+Objective: Ensure the backend can handle expected loads and perform well under stress.
+Tools: Apache JMeter or similar performance testing tools.
+Scope: Test the performance of critical API endpoints under varying loads.
+Approach:
+Simulate different levels of user load and measure response times.
+Identify and address performance bottlenecks.
+Ensure the backend can scale to meet demand.
+Frontend Testing Plan
+Unit Testing
+
+Objective: Verify that individual components of the frontend perform as expected.
+Tools: Jest and React Testing Library.
+Scope: Focus on testing React components, utility functions, and hooks.
+Approach:
+Write tests for each React component to ensure they render correctly and handle user interactions.
+Test utility functions and hooks in isolation.
+Use mock data and functions to simulate component dependencies.
+Integration Testing
+
+Objective: Ensure that different components of the frontend work together as expected.
+Tools: Jest and React Testing Library.
+Scope: Test the integration of multiple components within a single page or feature.
+Approach:
+Validate the interactions between parent and child components.
+Ensure that state and props are passed correctly between components.
+Test complex user interactions that span multiple components.
+End-to-End Testing
+
+Objective: Validate the entire user journey from the frontend to the backend.
+Tools: Cypress or Selenium.
+Scope: Test complete user scenarios, such as registration, login, and ticket purchase.
+Approach:
+Create test cases that mimic real user interactions with the application.
+Validate that data is correctly processed and displayed from the frontend to the backend.
+Ensure that user flows are intuitive and error-free.
+Performance Testing
+
+Objective: Ensure the frontend performs well under different conditions.
+Tools: Lighthouse or similar performance testing tools.
+Scope: Test the performance of key pages and user interactions.
+Approach:
+Measure load times and responsiveness of the application.
+Identify and optimize performance bottlenecks.
+Ensure the application is optimized for different devices and screen sizes.
+Continuous Integration and Continuous Deployment (CI/CD)
+Objective: Automate the testing process to ensure consistent quality and facilitate rapid deployment.
+Tools: GitHub Actions, Jenkins, or similar CI/CD tools.
+Approach:
+Set up automated pipelines to run tests on every code commit.
+Ensure that tests cover both the frontend and backend components.
+Deploy the application to a staging environment for further testing before production.

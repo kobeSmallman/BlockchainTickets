@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "eventticketingsystem-cc46d",
+  "private_key_id": "1330c9ab91de325717b3b440495ae06661ce81f1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDQlphpbOItpzoL\nc3Y0cj4+9Zg3KSqdE9EfcYbHTXFqxKxYlMZXoQn7fAh4WYRekKD0IylVyYUjCMqS\nsXZshKjuuZom5qZ29TNyMIt09Nof01JGUP/qRLEH7EgF/pB0BtMPNAPNQBIU30sX\n6QfzTK6HwLUngj6vvEkg2+87ZPrT1CLH5TZmaexQgTwSrnekkuM+5PK4sGbgEr0a\nHfDK8UkVfGmahygLweDyooapbWpIE93Qkghl9ZhwCZ6Qe4IlIxcYU7NaXcW3Ay+E\n3IxNb+tcfXuEG4A+qPFRNpQ/9cumFWnNDu+SHbGKLZ9GgwAqhORFtSu6KuQ/56qt\n+cAYKWldAgMBAAECggEANBK0f/U/zdfmpL8xbkxq/7q+Ql8TlV1CItBrrkvGGbp5\nsC+MCIpafJ7tWmY2pokCtZAlnJYPl7x1HgQRpWvE5LwPINEKE76JFmPKHOuXnMRb\n0NQd33VAoNK69Ewl8eFWRYBdxprNKMrJ63Ewm+uz0o4oa3GXhrXBp+NgKPq/p6vl\nk9JUgL+wsZQWCqsfrMMRAUSLod7qRSb1/H7zG5582CkV7sCYF4qM71O9ZVdwNj36\nTH1m+LBQ2GGcl7H23ms28KjG8DJYgekE2S3eZZRtuBX5aTGz0riVFknui4qvhrZY\nYEu31KVDHsfLxYLnL3xSNQ3dQQ6N0UBIeA4JcNDP/QKBgQDp8bEufolyb04qosEm\naBanId7IwpBFFGTfojb6cWEbbHN/RpBcJqHxO2LVbB/CLzfY5WCBYJ6g40czJ+W5\nkV94EesjAjjhD7BN80xDkq/evukPJ7svqRxj4FUSA4bMXfpAWV8fjfb/xN9wQ8xU\nO/OacqXT6a7mQ6swAmpBuwHlqwKBgQDkQO7BtlXmTxdxB0MKq5UyBA79iH6LKUaT\ny5lMBhPLGwYo9x9TFSqhp69mfh2cngMczegy0regJo/dWE20avyiFAKVTggff3Jx\n4KHUu0TvLPErtHeE2qPCjHtaMCWop2HqhoIzHk+5c+VDGLPgI8ZiIkuINjFPpl03\njhbhCTRVFwKBgQCyNSWWWFfVb0ppGg/udM4ExL1TyzphFPb+kDA3ORUS8dtNcfBX\n8incfDN+hl3u608sjxajl3le76L2KgdKA55o9aVbxr6TWwMfbh2DQANut5kLrWVf\nGgCBaIsFLOCLX29Zg3r9q4QjM9JNT6gf5odb+MevlMxhpdyKttxAc/cu/wKBgQDN\nlX52k1gDPDGM6FGGBs02Y1ltGceAaAjdjX/hbYfeY9TEiPB50JK5T2M4GVdqfReo\nlf0R6aDialkhsCss2T/6a7N37vR6Cjx2PTEFfja0hfIiv0T3MEZXMFjZ/ouswDX9\nGnGiwSZljvFr4ZABzbcdJG6LnOQFLX7ATwZkYfn0uQKBgF0C5wODjI3b6RN8KqMm\nSo5X1M9kH/VfF4JInzr8ydPgEplZ3DjV2VehUwzkl/8wU+YSZ093IS4uv1HleQP6\nbCm+Wgfj8h+hkTzEQCNAIZ+FeLHzmUqQgH4b8ROsrWz2/1jDTU6Uqo/JIWn/RTAZ\n1ejfS/bXYsiD58scYc5wBAH3\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-bvkp0@eventticketingsystem-cc46d.iam.gserviceaccount.com",
+  "client_id": "114851572259162371547",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-bvkp0%40eventticketingsystem-cc46d.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

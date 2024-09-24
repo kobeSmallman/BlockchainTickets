@@ -1,0 +1,6 @@
+{
+  "Firebase": {
+    "ProjectId": "eventticketingsystem-cc46d",
+    "CredentialPath": "Configs/serviceAccountKey.json"
+  }
+}
